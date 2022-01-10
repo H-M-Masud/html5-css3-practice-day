@@ -1,11 +1,36 @@
 body{
     color: #fafafa;
 }
-
+nav{
+    background-color: salmon;
+    margin: 0px 20px;
+    padding: 20px 0;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: #121212;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .2s;
+}
+nav ul li a:hover{
+    background-color: gray;
+}
 .header-container{
     background-color: salmon;
     margin: 0 20px;
     padding: 20px;
+}
+.header-container h1{
+    text-align: center;
 }
 .orderlinst-container{
     display: flex;
@@ -74,4 +99,202 @@ tr:hover{
     padding: 10px;
     display: flex;
     justify-content: center;
+}
+
+/* add animation */
+.video-heading{
+    position: relative;
+    color: transparent;
+
+}
+.video-heading::before{
+    content: 'Youtube video';
+    color: #00b894;
+    position: absolute;
+    animation: typing 5s linear infinite;
+}
+@keyframes typing{
+    0%{
+        content: '|';
+    }
+    5%{
+        content: 'Y|';
+    }
+    10%{
+        content: 'Yo|';
+    }
+    15%{
+        content: 'You|';
+    }
+    20%{
+        content: 'Yout|';
+    }
+    25%{
+        content: 'Youtu|';
+    }
+    30%{
+        content: 'Youtub|';
+    }
+    35%{
+        content: 'Youtube|';
+    }
+    40%{
+        content: 'Youtube ';
+    }
+    45%{
+        content: 'Youtube V|';
+    }
+    50%{
+        content: 'Youtube Vi|';
+    }
+    55%{
+        content: 'Youtube Vid|';
+    }
+    60%{
+        content: 'Youtube Vide|';
+    }
+    65%{
+        content: 'Youtube Video|';
+    }
+    70%,
+    85%{
+        content: 'Youtube Vide|';
+    }
+    86%{
+        content: 'Youtube Vid|';
+    }
+    87%{
+        content: 'Youtube Vi|';
+    }
+    88%{
+        content: 'Youtube V|';
+    }
+    89%{
+        content: 'Youtube |';
+    }
+    90%{
+        content: 'Youtube|';
+    }
+    91%{
+        content: 'Youtub|';
+    }
+    92%{
+        content: 'Youtu|';
+    }
+    93%{
+        content: 'Yout|';
+    }
+    94%{
+        content: 'You|';
+    }
+    95%{
+        content: 'Yo|';
+    }
+    96%{
+        content: 'Y|';
+    }
+    97%{
+        content: '|';
+    }
+    98%{
+        content: '|';
+    }
+    99%{
+        content: '|';
+    }
+    100%{
+        content: '|';
+    }
+}
+
+/* video gallery */
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.video{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.video iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.border{
+    background-color: #fff;
+    position: absolute;
+    transition: .7s linear;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 280px;
+}
+.border.left, .border.right{
+    width: 4px;
+    height: 280px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.video:hover .border.top{
+    right: 5px;
+}
+.video:hover .border.bottom{
+    left: 5px;
+}
+.video:hover .border.left{
+    top: 5px;
+}
+.video:hover .border.right{
+    bottom: 5px;
+}
+
+.video-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding-left: 30px;
+    transform: translate(400px);
+    transition: .3s ease-out;
+}
+
+.video:hover .video-content{
+    transform: translateY(100px);
+}
+
+.video::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+}
+.video:hover::before{
+    opacity: 1;
 }
