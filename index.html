@@ -10,39 +10,120 @@
             background-color: #121212;
             color: #fafafa;
         }
+        .orderlinst-container{
+            display: flex;
+            justify-content: space-around;
+            background-color: #00b894;
+            width: 100vh;
+            margin: auto;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+        .orderlinst-container ol li{
+            padding: 5px;
+            width: 20vh;
+            border-radius: 5px;
+        }
+        .orderlinst-container ol li:hover{
+            background-color: black;
+        }
+        /* table style */
+        table{
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        td, th{
+            border: 3px solid #ffffff;
+            padding: 0 20px;
+        }
+        tr:hover{
+            background-color: blanchedalmond;
+            color: #121212;
+        }
     </style>
 </head>
 <body>
     <main>
         <section>
             <h1>order list of inline, block, and inline-block</h1>
-            <div>
-                <h3>inline element</h3>
-                <ol>
-                    <li>span</li>
-                    <li>bold</li>
-                    <li>italic</li>
-                    <li>strong</li>
-                    <li>anchor</li>
-                    <li>button</li>
-                    <li>input</li>
-                </ol>
-                <h3>block element</h3>
-                <ol>
-                    <li>heading</li>
-                    <li>paragraph</li>
-                    <li>div</li>
-                    <li>order list</li>
-                    <li>table</li>
-                    <li>section</li>
-                    <li>footer</li>
-                </ol>
-                <h3>inline-block element</h3>
-                <ol>
-                    <li>image</li>
-                    <li>textarea</li>
-                </ol>
+            <div class="orderlinst-container">
+                <div>
+                    <h3>inline element</h3>
+                    <ol>
+                        <li>span</li>
+                        <li>bold</li>
+                        <li>italic</li>
+                        <li>strong</li>
+                        <li>anchor</li>
+                        <li>button</li>
+                        <li>input</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>block element</h3>
+                    <ol>
+                        <li>heading</li>
+                        <li>paragraph</li>
+                        <li>div</li>
+                        <li>order list</li>
+                        <li>table</li>
+                        <li>section</li>
+                        <li>footer</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>inline-block element</h3>
+                    <ol>
+                        <li>image</li>
+                        <li>textarea</li>
+                    </ol>
+                </div>
             </div>
+        </section>
+        <section class="table-section">
+            <table>
+                <caption>my friend address</caption>
+                <thead>
+                    <tr>
+                        <th>NO.</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Shadul Islam</td>
+                        <td>Hajishoray</td>
+                        <td>01845125369</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Saiful Islam</td>
+                        <td>khalphar</td>
+                        <td>01879523321</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Amdadul Islam</td>
+                        <td>Domkhali</td>
+                        <td>01884-291656</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tarifull Islam</td>
+                        <td>Tataiya</td>
+                        <td>01842-365987</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Ritu</td>
+                        <td>Chittagong</td>
+                        <td>01845-364528</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 </body>
